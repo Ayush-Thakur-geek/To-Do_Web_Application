@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=\, initial-scale=1.0" />
+    <title>Warriors</title>
+
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css"
+    rel="stylesheet"
+/>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="main">
+      <video
+        src="vids/pexels_videos_2324166 (2160p).mp4"
+        autoplay
+        muted
+        playsinline
+        preload="auto"></video>
+      <div id="content">
+        <h1 class="header">To-Do List</h1>
+        <div id="bar">
+          <input
+            class="enter-goals"
+            type="text"
+            placeholder="Enter your daily goals" />
+          <div class="add-goals color-parent" onclick="addGoal()">
+            <h4>Add</h4>
+            <div class="color-fill color-fill-add"></div>
+          </div>
+        </div>
+
+        <div id="goals">
+          <ul id="list">
+          </ul>
+        </div>
+
+        <div id="submit">
+          <a href="">
+            <div class="submit-goals color-parent"><span>
+              <h4>Submit <i style="z-index: 1; position: relative;" class="ri-arrow-right-line"></i></span></h4>
+              <div class="color-fill color-fill-submit"></div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
