@@ -18,41 +18,86 @@
       </div>
       <div id="content">
         <div id="options">
-          <a class="options-list" href=""
+          <a class="options-list" href="#main"
             ><h2>Home</h2>
             <div class="sliding-img">
-              <img src="To-Do-Img/images/to-do-list-apps.webp" alt="" /></div
+              <img
+                src="To-Do-Img/images/to-do-list-apps.webp"
+                alt=""
+                class="slide" /></div
           ></a>
           <a class="options-list" href=""
             ><h2>Progress</h2>
             <div class="sliding-img">
               <img
                 src="To-Do-Img/images/black-and-white-chart-cost-industry.jpg"
-                alt="" /></div
+                alt=""
+                class="slide" /></div
           ></a>
           <a class="options-list" href=""
             ><h2>History</h2>
             <div class="sliding-img">
               <img
                 src="To-Do-Img/images/original-9c6201ef3215174d0d18ab61c7acd8f0.webp"
-                alt="" />
+                alt=""
+                class="slide" />
             </div>
           </a>
+
+          <div id="watch">
+            <h2 id="timer">00:00:00</h2>
+            <div id="bar">
+              <div id="line"></div>
+            </div>
+          </div>
         </div>
         <div id="list">
+          <div onclick="submitProperty()" class="color-parent" id="submit">
+            <span><h4>Submit</h4> </span>
+            <span
+              ><svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                width="20"
+                height="20"
+                fill="currentColor">
+                <path
+                  d="M9.9997 15.1709L19.1921 5.97852L20.6063 7.39273L9.9997 17.9993L3.63574 11.6354L5.04996 10.2212L9.9997 15.1709Z"></path></svg
+            ></span>
+
+            <div id="submit-color" class="color-fill"></div>
+          </div>
           <div id="goals-added-container">
             <ul id="goals-added">
-              <li>hello</li>
+              <!-- <li>hello</li> -->
             </ul>
           </div>
-          <div id="adding-goals"></div>
+          <div id="adding-goals">
+            <input type="text" />
+            <div onclick="addGoal()" id="add" class="color-parent">
+              <span
+                ><svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 24 24"
+                  width="32"
+                  height="32"
+                  fill="rgba(255,255,255,255)">
+                  <path
+                    d="M11 11V5H13V11H19V13H13V19H11V13H5V11H11Z"></path></svg
+              ></span>
+              <div id="add-color" class="color-fill"></div>
+            </div>
+          </div>
         </div>
       </div>
-      <div id="footer">
-        <div id="watch"></div>
-      </div>
+      <div id="footer"></div>
     </div>
 
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"
+      integrity="sha512-cOH8ndwGgPo+K7pTvMrqYbmI8u8k6Sho3js0gOqVWTmQMlLIi6TbqGWRTpf1ga8ci9H3iPsvDLr4X7xwhC/+DQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"></script>
     <script src="script2.js"></script>
   </body>
 </html>

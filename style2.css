@@ -28,6 +28,12 @@ a {
   color: white;
 }
 
+.color-fill {
+  position: absolute;
+  background-color: #f44336;
+  top: 100%;
+}
+
 #main {
   width: 100%;
   height: 100vh;
@@ -84,24 +90,27 @@ a {
   width: 25%;
   background-color: rgb(42, 41, 41);
   height: calc(100vh - 80px);
-  padding: 70px 0 0 60px;
+  padding: 70px 0 0 40px;
 }
 
 .options-list {
+  position: relative;
   width: 100%;
-  height: 70px;
+  height: 120px;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 32px;
   border-top: 0.25px solid rgb(243, 219, 219);
 }
 
-.options-list:last-child {
+.options-list:nth-child(3) {
   border-bottom: 0.25px solid rgb(243, 219, 219);
+  margin-bottom: 35vh;
 }
 
 .options-list > h2 {
-  font-weight: 200;
+  font-weight: 400;
+  font-size: 35px;
 }
 
 .sliding-img {
@@ -109,7 +118,8 @@ a {
   width: 200px;
   height: 200px;
   z-index: 1;
-  transform: translate(0, -151px);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
   opacity: 0;
 }
 
@@ -119,12 +129,77 @@ a {
   height: 200px;
 }
 
+#watch {
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 300px;
+  height: 100px;
+  /* top: 45%; */
+
+  padding: 10px;
+}
+
+#timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+#bar {
+  margin: 25px auto;
+  width: 80%;
+  height: 5px;
+  background-color: rgb(51, 47, 47);
+}
+
+#line {
+  width: 0%;
+  height: 5px;
+  background-color: rgb(25, 57, 99);
+}
+
 #list {
   position: relative;
   width: 75%;
   height: calc(100vh - 80px);
   padding: 65px 30px;
   display: flex;
+  flex-direction: column;
+  background-color: #f8f4ec;
+}
+
+#submit {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  width: 120px;
+  height: 60px;
+  margin: auto;
+  background-color: #555;
+  border-radius: 1.2em;
+  overflow: hidden;
+  cursor: pointer;
+  margin-bottom: 50px;
+}
+
+#submit span {
+  z-index: 99;
+}
+
+#submit span svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#submit-color {
+  width: 120px;
+  height: 60px;
+  border-radius: 1.2em;
 }
 
 #goals-added-container {
@@ -136,7 +211,8 @@ a {
 
 ul {
   display: flex;
-  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   width: 100%;
   height: 100%;
   overflow: auto;
@@ -156,6 +232,7 @@ ul li {
   border: 1px solid black;
   border-radius: 10px;
   font-size: 40px;
+  margin-bottom: 50px;
 }
 
 ul li::before {
@@ -186,7 +263,7 @@ ul li span {
   position: absolute;
   border-radius: 50%;
   right: 0;
-  top: 11px;
+  top: 29px;
   width: 40px;
   height: 40px;
   font-size: 35px;
@@ -199,4 +276,54 @@ ul li span:hover {
   color: #f44336;
   background: #edeef0;
   transition: ease-in-out 0.3s;
+}
+
+#adding-goals {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: fit-content;
+  margin: auto;
+}
+
+#add {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #634b49;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#add span {
+  z-index: 99;
+}
+
+#add span svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#add-color {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+}
+
+#adding-goals > input {
+  padding: 0 70px 0 20px;
+  height: 60px;
+  width: 0px;
+  border-radius: 1.2em;
+  font-size: 26px;
+  border: none;
+  outline: none;
+  background-color: rgb(232, 220, 217);
+  opacity: 0;
 }
