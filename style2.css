@@ -163,11 +163,22 @@ a {
 #list {
   position: relative;
   width: 75%;
+  /* height: calc(100vh - 80px); */
+  /* padding: 65px 30px; */
+  /* display: flex;
+  flex-direction: column; */
+  /* background-color: #f8f4ec; */
+  /* overflow: hidden; */
+}
+
+#home {
   height: calc(100vh - 80px);
   padding: 65px 30px;
+  position: relative;
   display: flex;
   flex-direction: column;
   background-color: #f8f4ec;
+  display: flex;
 }
 
 #submit {
@@ -326,4 +337,25 @@ ul li span:hover {
   outline: none;
   background-color: rgb(232, 220, 217);
   opacity: 0;
+}
+
+#progress {
+  position: relative;
+  height: calc(100vh - 80px);
+  display: none;
+}
+
+.chart {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.chart > canvas {
+  width: 75%;
+  height: 75%;
 }

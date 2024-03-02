@@ -65,6 +65,7 @@ function addGoal() {
   } else {
     let li = document.createElement("li");
     li.innerHTML = input.value;
+    input.value = "";
     listContainer.appendChild(li);
 
     span.innerHTML = "\u00d7";
@@ -151,6 +152,7 @@ function colorAppear() {
 
 function submitProperty() {
   span.style.display = "none";
+  addDate();
 }
 
 // Get all .options-list elements
@@ -172,18 +174,17 @@ for (let i = 0; i < optionsList.length; i++) {
 
     // Change the content of the #list div based on the text content of the clicked element
     if (optionText === "Home") {
-      fetch("page2.html")
-        .then((response) => response.text())
-        .then((data) => {
-          listDiv.innerHTML = data;
-        });
+      // fetch("page2.html")
+      //   .then((response) => response.text())
+      //   .then((data) => {
+      //     listDiv.innerHTML = data;
+      //   });
+      listDiv.children[0].style.display = "flex";
+      listDiv.children[1].style.display = "none";
     } else if (optionText === "Progress") {
-      fetch("listDiv1.html")
-        .then((response) => response.text())
-        .then((data) => {
-          listDiv.innerHTML = data;
-        });
-    } else if (optionText === "History") {
+      listDiv.children[0].style.display = "none";
+      listDiv.children[1].style.display = "flex";
+    } else if (optionText === "Community") {
       listDiv.innerHTML = "<h2>History content</h2>";
     }
   });
@@ -191,6 +192,6 @@ for (let i = 0; i < optionsList.length; i++) {
 
 colorAppear();
 sliding_img();
-addDate();
+
 addTimer();
 goalAnimation();
