@@ -181,11 +181,16 @@ for (let i = 0; i < optionsList.length; i++) {
       //   });
       listDiv.children[0].style.display = "flex";
       listDiv.children[1].style.display = "none";
+      listDiv.children[2].style.display = "none";
     } else if (optionText === "Progress") {
       listDiv.children[0].style.display = "none";
       listDiv.children[1].style.display = "flex";
+      listDiv.children[2].style.display = "none";
     } else if (optionText === "Community") {
-      listDiv.innerHTML = "<h2>History content</h2>";
+      listDiv.innerHTML = "<h2>Working on it.</h2>";
+      listDiv.children[0].style.display = "none";
+      listDiv.children[1].style.display = "none";
+      listDiv.children[2].style.display = "flex";
     }
   });
 }
